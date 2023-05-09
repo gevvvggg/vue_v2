@@ -11,6 +11,9 @@ axios.interceptors.request.use((config) => {
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config
 })
+import ZkTable from 'vue-table-with-tree-grid'
+
+Vue.component('tree-table', ZkTable)
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
 Vue.use(ElementUI)
